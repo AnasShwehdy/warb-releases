@@ -11,12 +11,7 @@ attached. warb.network renders these notes directly from that API.
 
 ## [Unreleased]
 
-### Added
-
-- Linux bundles (AppImage and `.deb`).
-- Wrap/unwrap helpers for the wSOL escrow mint.
-
-## [0.1.0] — Unreleased
+## [0.1.0-beta.1] - 2026-07-30
 
 First public devnet build.
 
@@ -24,6 +19,8 @@ First public devnet build.
 
 - **Capacity order book.** Listings are Solana accounts discovered with `getProgramAccounts` —
   there is no WARB API and no index. Filter live capacity by provider, model and price per Mtok.
+- **Wrap/unwrap helpers for the wSOL escrow mint**, so funding and closing a session doesn't
+  require a separate SPL-token tool.
 - **Buyer-funded sessions.** Opening a session escrows wSOL in a program-derived vault sized to the
   tokens purchased and commits the buyer's hash anchor on chain.
 - **PayWord settlement.** The buyer generates the hash chain and releases one preimage per tick of
@@ -49,9 +46,9 @@ First public devnet build.
 
 ### Known limitations
 
-- Devnet only. The program is **not audited** — do not route production secrets or real value.
-- macOS and Windows builds only; Linux is next.
+- **Beta.** Devnet only. The program is **not audited** — do not route production secrets or real
+  value. Wire formats and on-chain layouts may still change between beta builds.
 - Seller capacity is self-reported by the provider adapter and not independently attested.
 
-[Unreleased]: https://github.com/AnasShwehdy/warb-releases/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/AnasShwehdy/warb-releases/releases/tag/v0.1.0
+[Unreleased]: https://github.com/AnasShwehdy/warb-releases/compare/v0.1.0-beta.1...HEAD
+[0.1.0-beta.1]: https://github.com/AnasShwehdy/warb-releases/releases/tag/v0.1.0-beta.1
