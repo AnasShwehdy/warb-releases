@@ -11,6 +11,34 @@ attached. warb.network renders these notes directly from that API.
 
 ## [Unreleased]
 
+## [0.1.0-beta.2] - 2026-07-31
+
+### Added
+
+- **Buyer agent tools.** The seller can request file and terminal work; tools run only in your local
+  workspace — never on the seller machine.
+- **Live streaming replies.** Answers appear as they generate when using API providers.
+- **Seller live console.** One screen with status, tokens, ticks, profit, and a stop button while
+  you are serving. Buying and selling stay mutually exclusive.
+- **First-run product tour.** A skippable spotlight walkthrough of the main tabs after you land
+  on home for the first time.
+- **Developer local API.** Point Cursor or other OpenAI-compatible tools at a local WARB server
+  and use capacity you already bought on the book.
+- **Animated logo** on welcome and unlock.
+
+### Security
+
+- Agent tools execute only on the buyer, inside a chrooted workspace with command denylist /
+  allowlist checks.
+- Open session payment secrets are encrypted on disk so funded escrows survive an app restart.
+
+### Fixed
+
+- Recovery phrase no longer disappears before you can save it after creating a wallet.
+- Faster session messaging — replies arrive as soon as the mesh delivers them, without waiting
+  on a UI poll.
+- Duplicate connection when opening a session.
+
 ## [0.1.0-beta.1] - 2026-07-30
 
 First public devnet build.
@@ -50,5 +78,6 @@ First public devnet build.
   value. Wire formats and on-chain layouts may still change between beta builds.
 - Seller capacity is self-reported by the provider adapter and not independently attested.
 
-[Unreleased]: https://github.com/AnasShwehdy/warb-releases/compare/v0.1.0-beta.1...HEAD
+[Unreleased]: https://github.com/AnasShwehdy/warb-releases/compare/v0.1.0-beta.2...HEAD
+[0.1.0-beta.2]: https://github.com/AnasShwehdy/warb-releases/releases/tag/v0.1.0-beta.2
 [0.1.0-beta.1]: https://github.com/AnasShwehdy/warb-releases/releases/tag/v0.1.0-beta.1
